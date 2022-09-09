@@ -385,9 +385,9 @@ main::before {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  top: 0.65rem;
+  top: 2rem;
   font-weight: 500;
-  right: 1rem;
+  right: 2rem;
   z-index: 150;
   text-transform: uppercase;
 }
