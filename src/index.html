@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Estelle Grésillon - Travels</title>
+    <meta name="description" content="Estelle Grésillon's travels" />
+    <meta
+      name="keywords"
+      content="animation, stack, menu, letters, javascript, gsap"
+    />
+    <meta name="author" content="Estelle Grésillon" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/ytn8osp.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+  </head>
+  <body class="loading">
+    <main>
+      <div class="frame">
+        <h1 class="frame__title">Estelle Grésillon - Travels</h1>
+      </div>
+      <div class="stack-wrap" aria-hidden="true">
+        <div class="stack" id="stack-1">
+          <img class="stack__img" src="img/paris1.jpg" alt="Some image" />
+          <img class="stack__img" src="img/paris2.jpg" alt="Some image" />
+          <img class="stack__img" src="img/paris3.jpg" alt="Some image" />
+          <img class="stack__img" src="img/paris4.jpg" alt="Some image" />
+          <img class="stack__img" src="img/paris5.jpg" alt="Some image" />
+          <img class="stack__img" src="img/paris6.jpg" alt="Some image" />
+        </div>
+        <div class="stack" id="stack-2">
+          <img class="stack__img" src="img/japan1.jpg" alt="Some image" />
+          <img class="stack__img" src="img/japan2.jpg" alt="Some image" />
+          <img class="stack__img" src="img/japan3.jpg" alt="Some image" />
+          <img class="stack__img" src="img/japan4.jpg" alt="Some image" />
+          <img class="stack__img" src="img/japan5.jpg" alt="Some image" />
+          <img class="stack__img" src="img/japan6.jpg" alt="Some image" />
+        </div>
+        <div class="stack" id="stack-3">
+          <img class="stack__img" src="img/usa1.jpg" alt="Some image" />
+          <img class="stack__img" src="img/usa2.jpg" alt="Some image" />
+          <img class="stack__img" src="img/usa3.jpg" alt="Some image" />
+          <img class="stack__img" src="img/usa4.jpg" alt="Some image" />
+          <img class="stack__img" src="img/usa5.jpg" alt="Some image" />
+          <img class="stack__img" src="img/usa6.jpg" alt="Some image" />
+        </div>
+        <div class="stack" id="stack-4">
+          <img class="stack__img" src="img/iceland1.jpg" alt="Some image" />
+          <img class="stack__img" src="img/iceland2.jpg" alt="Some image" />
+          <img class="stack__img" src="img/iceland3.jpg" alt="Some image" />
+          <img class="stack__img" src="img/iceland4.jpg" alt="Some image" />
+          <img class="stack__img" src="img/iceland5.jpg" alt="Some image" />
+          <img class="stack__img" src="img/iceland6.jpg" alt="Some image" />
+        </div>
+        <div class="stack" id="stack-5">
+          <img class="stack__img" src="img/misc1.jpg" alt="Some image" />
+          <img class="stack__img" src="img/misc2.jpg" alt="Some image" />
+          <img class="stack__img" src="img/misc3.jpg" alt="Some image" />
+          <img class="stack__img" src="img/misc6.jpg" alt="Some image" />
+          <img class="stack__img" src="img/misc4.jpg" alt="Some image" />
+          <img class="stack__img" src="img/misc5.jpg" alt="Some image" />
+        </div>
+        <!-- <div class="stack" id="stack-6">
+          <img class="stack__img" src="img/22.jpg" alt="Some image" />
+          <img class="stack__img" src="img/23.jpg" alt="Some image" />
+          <img class="stack__img" src="img/24.jpg" alt="Some image" />
+          <img class="stack__img" src="img/25.jpg" alt="Some image" />
+          <img class="stack__img" src="img/26.jpg" alt="Some image" />
+          <img class="stack__img" src="img/27.jpg" alt="Some image" />
+        </div> -->
+      </div>
+      <nav class="menu menu--open">
+        <a class="menu__item" data-stack="stack-1" data-content="content-1"
+          >Paris</a
+        >
+        <a class="menu__item" data-stack="stack-2" data-content="content-2"
+          >Japan</a
+        >
+        <a class="menu__item" data-stack="stack-3" data-content="content-3"
+          >United States</a
+        >
+        <a class="menu__item" data-stack="stack-4" data-content="content-4"
+          >Iceland</a
+        >
+        <a class="menu__item" data-stack="stack-5" data-content="content-5"
+          >Misc</a
+        >
+        <!-- <a class="menu__item" data-stack="stack-6" data-content="content-6"
+          >Misc</a
+        > -->
+      </nav>
+      <section class="content-wrap">
+        <div class="content" id="content-1">
+          <h2 class="content__title">Paris</h2>
+          <p class="content__text">
+            My cold human, you inspire me to write.<br />
+            I love the way you pray, resist and fly,<br />
+            Invading my mind day and through the night,<br />
+            Always dreaming about the hot hereby.<br />
+          </p>
+        </div>
+        <div class="content" id="content-2">
+          <h2 class="content__title">Japan</h2>
+          <p class="content__text">
+            Let me compare you to a green balloon?<br />
+            You are more dandy, bandy and freaky.<br />
+            Big sun heats the handy peaches of June,<br />
+            And summertime has the randy rekey.<br />
+          </p>
+        </div>
+        <div class="content" id="content-3">
+          <h2 class="content__title">United States</h2>
+          <p class="content__text">
+            How do I love you? Let me count the ways.<br />
+            I love your lovely heart, soul and head.<br />
+            Thinking of your sandy soul fills my days.<br />
+            My love for you is the cheeky embed.<br />
+          </p>
+        </div>
+        <div class="content" id="content-4">
+          <h2 class="content__title">Iceland</h2>
+          <p class="content__text">
+            My cold human, you inspire me to write.<br />
+            I love the way you pray, resist and fly,<br />
+            Invading my mind day and through the night,<br />
+            Always dreaming about the hot hereby.<br />
+          </p>
+        </div>
+        <div class="content" id="content-5">
+          <h2 class="content__title">Misc</h2>
+          <p class="content__text">
+            Let me compare you to a green balloon?<br />
+            You are more dandy, bandy and freaky.<br />
+            Big sun heats the handy peaches of June,<br />
+            And summertime has the randy rekey.<br />
+          </p>
+        </div>
+        <!-- <div class="content" id="content-6">
+          <h2 class="content__title">Misc</h2>
+          <p class="content__text">
+            How do I love you? Let me count the ways.<br />
+            I love your lovely heart, soul and head.<br />
+            Thinking of your sandy soul fills my days.<br />
+            My love for you is the cheeky embed.<br />
+          </p>
+        </div> -->
+        <!-- <div class="content" id="content-7">
+          <h2 class="content__title">Iris Catapult</h2>
+          <p class="content__text">
+            My cold human, you inspire me to write.<br />
+            I love the way you pray, resist and fly,<br />
+            Invading my mind day and through the night,<br />
+            Always dreaming about the hot hereby.<br />
+          </p>
+        </div>
+        <div class="content" id="content-8">
+          <h2 class="content__title">Anthony Gun</h2>
+          <p class="content__text">
+            Let me compare you to a green balloon?<br />
+            You are more dandy, bandy and freaky.<br />
+            Big sun heats the handy peaches of June,<br />
+            And summertime has the randy rekey.<br />
+          </p>
+        </div> -->
+        <button class="unbutton close">
+          <span class="close__cross">&#10539;</span><span>Close</span>
+        </button>
+      </section>
+      <svg
+        class="circle"
+        vector-effect="non-scaling-stroke"
+        width="1600"
+        height="1600"
+      >
+        <circle
+          vector-effect="non-scaling-stroke"
+          cx="800"
+          cy="800"
+          r="330"
+          data-svg-origin="800 800"
+          transform="matrix(1,0,0,1,0,0)"
+          style="transform-origin: 0px 0px"
+        ></circle>
+      </svg>
+    </main>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
